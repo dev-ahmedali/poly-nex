@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #05070b;
+  --surface: #0b1220;
+  --navy: #001b4e;
+  --deep-blue: #0e3a8a;
+  --royal-blue: #1565d8;
+  --bright-blue: #2f8df5;
+  --sky-blue: #a8d8f7;
+  --gold: #f7c53a;
+  --orange: #ff9f0a;
+  --text: #f5f7fb;
+  --muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
