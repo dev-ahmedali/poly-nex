@@ -42,7 +42,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.16 }}
             className="mt-6 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg"
           >
-            I create abstract, technical, and cinematic motion studies using Blender and Geometry Nodes.
+            We create abstract, technical, and cinematic motion studies using Blender and Geometry Nodes.
             This portfolio showcases rendered video loops, procedural experiments, and motion-focused visual work.
           </motion.p>
 
@@ -88,7 +88,7 @@ export default function Hero() {
                 poster="/images/hero-poster.jpg"
               >
                 <source
-                  src="https://res.cloudinary.com/your-cloud-name/video/upload/v1/hero-showreel.mp4"
+                  src="https://res.cloudinary.com/drcthgf8u/video/upload/v1776493078/video_1_gbxtmi.mp4"
                   type="video/mp4"
                 />
               </video>
