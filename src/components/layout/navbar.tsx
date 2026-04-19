@@ -7,6 +7,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/src/lib/constants";
 
+
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,7 +19,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             <div className="relative h-10 w-10 overflow-hidden rounded-xl ring-1 ring-white/10 sm:h-11 sm:w-11">
               <Image
-                src="/images/logo.png"
+                src="https://res.cloudinary.com/drcthgf8u/image/upload/v1776597460/LOGO_mcuej1.png"
                 alt="Polynex logo"
                 fill
                 className="object-contain"
