@@ -5,8 +5,8 @@ export default function WorksPage() {
   return (
     <section id="works" className="px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl font-semibold text-[var(--text)]">Featured Works</h2>
-        <p className="mt-3 text-[var(--muted)]">Explore my motion design work below.</p>
+        <h2 className="text-3xl font-semibold text-(--text)">Featured Works</h2>
+        <p className="mt-3 text-(--muted)">Explore my motion design work below.</p>
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project) => (
