@@ -2,7 +2,7 @@
 
 
 :root {
-  --bg: #05070b;
+  --bg: #111b31;
   --surface: #0b1220;
   --navy: #001b4e;
   --deep-blue: #0e3a8a;
@@ -22,5 +22,6 @@ html {
 
 body {
   background-color: var(--bg);
+  font-family: 'Arial', sans-serif;
   color: var(--text);
 }

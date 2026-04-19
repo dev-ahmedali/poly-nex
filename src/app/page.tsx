@@ -1,6 +1,7 @@
 import Navbar from "../components/layout/navbar";
+import ContactPage from "../components/sections/contact";
 import Hero from "../components/sections/hero";
-import WorksPage from "./work/page";
+import WorksPage from "./work/workpage";
 
 
 export default function HomePage() {
@@ -9,7 +10,9 @@ export default function HomePage() {
       <Navbar />
       <Hero />
         {/* Works Section */}
-      <WorksPage />  {/* Make sure WorksPage is rendering the projects correctly */}
+      <WorksPage />
+      {/* Make sure WorksPage is rendering the projects correctly */}
+      <ContactPage/>
 
       <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
@@ -17,11 +20,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-semibold text-[var(--text)]">Contact</h2>
-        </div>
-      </section>
+      
     </main>
   );
 }
