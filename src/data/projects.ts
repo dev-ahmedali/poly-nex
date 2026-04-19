@@ -7,7 +7,7 @@ export const projects = [
     subTitle: "Blender 5.0.1",
     thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776600334/Angle_Step_Array_lgwm6m.png",
     videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776599199/Angle_Step_Array_j8adzd.mkv",
-    youtubeTrailer:"pVO8gUikzgEB",
+    youtubeTrailer:"reH6GVn0HaU",
     externalLink: "https://www.superhive.com/product/fluid-simulation",
     galleryImages: [
       "https://res.cloudinary.com/drcthgf8u/image/upload/v1776600334/Angle_Step_Array_lgwm6m.png",
@@ -23,7 +23,7 @@ export const projects = [
     subTitle: "Blender 5.0.1",
     thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776600737/Pop_Up_Motion_1_dg2rig.png",
     videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776600823/Pop_Up_Motion_10001-0060_trtde8.mkv",
-    youtubeTrailer:"R5qzEAo5dOZuXrfU",
+    youtubeTrailer:"reH6GVn0HaU",
     externalLink: "https://www.superhive.com/product/fluid-simulation",
     galleryImages: [
       "https://res.cloudinary.com/drcthgf8u/image/upload/v1776600737/Pop_Up_Motion_1_dg2rig.png"
