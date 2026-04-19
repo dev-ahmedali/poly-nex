@@ -62,7 +62,7 @@ export default function WorkDetails() {
         {/* Trailer Section (YouTube Embed) */}
         {youtubeTrailer && (
           <div className="mt-12">
-            <h3 className="text-2xl font-semibold text-[var(--text)]">Watch the Trailer</h3>
+            <h3 className="text-2xl font-semibold text-(--text)">Watch the Trailer</h3>
             <iframe
               width="100%"
               height="315"
