@@ -3,7 +3,15 @@
 import { useState } from "react";
 import Link from "next/link";
 
-export default function ProjectCard({ title, description, slug, thumbnailUrl, videoUrl }) {
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  slug: string;
+  videoUrl: string;
+  thumbnailUrl: string;
+}
+
+export default function ProjectCard({ title, description, slug, thumbnailUrl, videoUrl }:ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -37,9 +45,9 @@ export default function ProjectCard({ title, description, slug, thumbnailUrl, vi
           </div>
         </div>
 
-        <div className="mt-4 p-4 bg-[var(--surface)] text-[var(--text)] z-10">
+        <div className="mt-4 p-4 bg-(--surface) text-(--text) z-10">
           <h3 className="font-semibold text-lg">{title}</h3>
-          <p className="text-sm text-[var(--muted)]">{description}</p>
+          <p className="text-sm text-(--muted)">{description}</p>
         </div>
       </Link>
     </div>

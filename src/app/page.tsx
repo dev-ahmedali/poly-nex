@@ -6,7 +6,7 @@ import WorksPage from "./work/workpage";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+    <main className="min-h-screen bg-(--bg) text-(--text)">
       <Navbar />
       <Hero />
         {/* Works Section */}
@@ -16,7 +16,7 @@ export default function HomePage() {
 
       <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-semibold text-[var(--text)]">About</h2>
+          <h2 className="text-3xl font-semibold text-(--text)">About</h2>
         </div>
       </section>
 
