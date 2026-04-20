@@ -11,7 +11,6 @@ export default function HomePage() {
       <Hero />
         {/* Works Section */}
       <WorksPage />
-      {/* Make sure WorksPage is rendering the projects correctly */}
       <ContactPage/>
 
       {/* <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">

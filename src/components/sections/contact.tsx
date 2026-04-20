@@ -5,24 +5,48 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
 import Link from "next/link";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [response, setResponse] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  // Function to handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission (e.g., send email or store in a database)
-    alert("Form submitted!");
+
+    // Reset previous response
+    setResponse("");
+    setLoading(true);
+
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("message", message);
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`, {
+        method: "POST",
+        body: formData,
+      });
+
+      // Check if the response from Formspree is OK
+      if (res.ok) {
+        setResponse("Message sent successfully!");  // Show success message
+      } else {
+        const errorData = await res.json();
+        setResponse(errorData.error || "There was an error sending the message. Please try again."); // Handle errors
+      }
+    } catch (error) {
+      setResponse("Error sending message.");  // Catch network or other errors
+    }
+
+    setLoading(false);
+
+    // Clear form fields after submission
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -54,9 +78,9 @@ export default function ContactPage() {
                 <div className="flex space-x-4 mt-2 ">
                   <Link href="#" target="_blank" rel="noopener noreferrer" className="text-(--royal-blue) hover:text-(--bright-blue)"><FaFacebookF className="text-[var(--royal-blue)] hover:text-[var(--sky-blue)] text-2xl" />
                   </Link>
-                  <Link href="#" target="_blank" rel="noopener noreferrer" className="text-[var(--royal-blue)] hover:text-[var(--bright-blue)]"><FaTwitter className="text-[var(--royal-blue)] hover:text-[var(--sky-blue)] text-2xl" />
+                  <Link href="#" target="_blank" rel="noopener noreferrer" className="text-(--royal-blue) hover:text-[var(--bright-blue)]"><FaTwitter className="text-(--royal-blue) hover:text-(--sky-blue) text-2xl" />
                   </Link>
-                  <Link href="#"  target="_blank" rel="noopener noreferrer" className="text-(--royal-blue) hover:text-(--bright-blue)"><FaInstagram className="text-[var(--royal-blue)] hover:text-[var(--sky-blue)] text-2xl" />
+                  <Link href="#"  target="_blank" rel="noopener noreferrer" className="text-(--royal-blue) hover:text-(--bright-blue)"><FaInstagram className="text-(--royal-blue) hover:text-(--sky-blue) text-2xl" />
                   </Link>
                 </div>
               </div>
@@ -74,9 +98,9 @@ export default function ContactPage() {
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="mt-2 block w-full px-4 py-3 rounded-lg border border-gray-300 bg-[var(--surface)] focus:ring-2 focus:ring-[var(--royal-blue)]"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="mt-2 block w-full px-4 py-3 rounded-lg border border-gray-300 bg-(--surface) focus:ring-2 focus:ring-(--royal-blue)"
                   required
                 />
               </div>
@@ -87,32 +111,38 @@ export default function ContactPage() {
                   type="email"
                   id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="mt-2 block w-full px-4 py-3 rounded-lg border border-gray-300 bg-[var(--surface)] focus:ring-2 focus:ring-[var(--royal-blue)]"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="mt-2 block w-full px-4 py-3 rounded-lg border border-gray-300 bg-(--surface) focus:ring-2 focus:ring-(--royal-blue)"
                   required
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-[var(--muted)]">Your Message</label>
+                <label htmlFor="message" className="block text-sm font-medium text-(--muted)">Your Message</label>
                 <textarea
                   id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   rows={6}
-                  className="mt-2 block w-full px-4 py-3 rounded-lg border border-gray-300 bg-[var(--surface)] focus:ring-2 focus:ring-[var(--royal-blue)]"
+                  className="mt-2 block w-full px-4 py-3 rounded-lg border border-gray-300 bg-(--surface) focus:ring-2 focus:ring-(--royal-blue)"
                   required
                 />
               </div>
 
+              {response && (
+                <div className="mt-2 text-sm text-center">
+            <span className="text-(--muted)">{response}</span>
+          </div>
+              )}
+
               <div className="mt-6 text-center">
                 <button
                   type="submit"
-                  className="inline-block px-8 py-3 bg-gradient-to-r from-[var(--royal-blue)] via-[var(--bright-blue)] to-[var(--sky-blue)] text-[var(--bg)] rounded-xl hover:scale-105 transition duration-300"
+                  disabled={loading}
+                  className="inline-block px-8 py-3 bg-gradient-to-r from-[var(--royal-blue)] via-(--bright-blue) to-(--sky-blue) text-(--bg) rounded-xl hover:scale-105 transition duration-300"
                 >
-                  Submit Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </div>
             </form>
