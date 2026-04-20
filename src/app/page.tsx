@@ -14,11 +14,11 @@ export default function HomePage() {
       {/* Make sure WorksPage is rendering the projects correctly */}
       <ContactPage/>
 
-      <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">
+      {/* <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl font-semibold text-(--text)">About</h2>
         </div>
-      </section>
+      </section> */}
 
       
     </main>

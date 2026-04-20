@@ -6,6 +6,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/src/lib/constants";
+import ThemeToggle from "../ui/themeToggle";
 
 
 
@@ -42,26 +43,32 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-(--muted) transition hover:bg-white/5 hover:text-(--text)]"
+                className="rounded-full px-4 py-2 text-sm font-bold text-(--muted) transition hover:bg-white/5 hover:text-(--text)]"
               >
                 {item.label}
               </Link>
             ))}
           </div>
 
-          <div className="hidden md:block">
+          
+
+          
+
+          {/* <div className="hidden md:block">
             <Link
               href="#works"
               className="inline-flex items-center rounded-full bg-linear-to-r from-(--royal-blue) via-(--bright-blue) to-(--sky-blue) px-5 py-2.5 text-sm font-semibold text-(--bg) transition hover:scale-[1.02]"
             >
               View Reel
             </Link>
-          </div>
+          </div> */}
+
+          <ThemeToggle/>
 
           <button
             type="button"
             aria-label="Toggle menu"
-            aria-expanded={isOpen}
+            aria-expanded={isOpen ? "true" : "false"}
             onClick={() => setIsOpen((prev) => !prev)}
             className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-(--text) transition hover:bg-white/10 md:hidden"
           >
@@ -91,13 +98,13 @@ export default function Navbar() {
                     ))}
                   </div>
 
-                  <Link
+                  {/* <Link
                     href="#works"
                     onClick={() => setIsOpen(false)}
                     className="mt-3 inline-flex w-full items-center justify-center rounded-xl bg-linear-to-r from-(--royal-blue) via-(--bright-blue) to-(--sky-blue) px-5 py-3 text-sm font-semibold text-(--bg)"
                   >
                     View Reel
-                  </Link>
+                  </Link> */}
                 </div>
               </motion.div>
             )}
