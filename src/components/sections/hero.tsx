@@ -88,7 +88,7 @@ export default function Hero() {
                 poster="/images/hero-poster.jpg"
               >
                 <source
-                  src="https://res.cloudinary.com/drcthgf8u/video/upload/v1776493078/video_1_gbxtmi.mp4"
+                  // src="https://res.cloudinary.com/drcthgf8u/video/upload/v1776493078/video_1_gbxtmi.mp4"
                   type="video/mp4"
                 />
               </video>

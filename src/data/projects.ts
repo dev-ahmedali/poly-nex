@@ -85,4 +85,46 @@ export const projects = [
       "https://res.cloudinary.com/drcthgf8u/image/upload/v1776602438/Particle_Reveal.blend_vxnwro.png"
     ]
   },
+  {
+    slug: "anticipation-and-jump",
+    title: "Anticipation and Jump",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666076/Anticipation_and_Jump_cjzst3.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776666975/Anticipation_and_Jump0001-0150_becxt3.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666076/Anticipation_and_Jump_cjzst3.jpg"
+    ]
+  },
+  {
+    slug: "bubble-burst",
+    title: "Bubble_Burst",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666089/Bubble_Burst.blend_s00yup.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776667023/Bubble_Burst_ba4jnf.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666089/Bubble_Burst.blend_s00yup.jpg"
+    ]
+  },
+  {
+    slug: "crack-realine",
+    title: "Crack Realine",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666107/Crack_Realine_omjgyp.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776667060/Crack_Realine_hoansi.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666107/Crack_Realine_omjgyp.jpg"
+    ]
+  },
 ];
