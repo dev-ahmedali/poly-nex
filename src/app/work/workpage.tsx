@@ -34,8 +34,8 @@ export default function WorksPage() {
   return (
     <section id="works" className="px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl font-semibold text-(--text)">Featured Works</h2>
-        <p className="mt-3 text-(--muted)">Explore my motion design work below.</p>
+        <h2 className="text-3xl font-semibold text-(--text)">Motions</h2>
+        <p className="mt-3 text-(--muted)">Explore All GeoMotion Presets.</p>
 
         <motion.div
           key={currentPage}
