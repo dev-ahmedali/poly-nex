@@ -82,7 +82,7 @@ export default function Hero() {
                 className="h-full w-full object-cover"
                 autoPlay
                 muted
-                // loop
+                loop
                 playsInline
                 preload="metadata"
                 poster="/images/hero-poster.jpg"
