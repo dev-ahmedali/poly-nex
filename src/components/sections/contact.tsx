@@ -3,82 +3,88 @@
 import { useState } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
 import Link from "next/link";
+import emailjs from "emailjs-com";
+import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion"; 
 
 export default function ContactPage() {
-   const [name, setName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [response, setResponse] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");;
+  const [statusMessage, setStatusMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Function to handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Reset previous response
-    setResponse("");
-    setLoading(true);
+    
+     setStatusMessage("Sending your message...");
+    setStatus("sending");
+    setIsSubmitting(true);
 
-    const formData = new FormData();
+    const form = e.target as HTMLFormElement;
+    
+     const formData = new FormData();
     formData.append("name", name);
     formData.append("email", email);
     formData.append("message", message);
 
-    try {
-      const res = await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`, {
-        method: "POST",
-        body: formData,
-      });
+ try {
+      const res = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        form,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
 
-      // Check if the response from Formspree is OK
-      if (res.ok) {
-        setResponse("Message sent successfully!");  // Show success message
+      if (res.status === 200) {
+        setStatus("success");
+        setStatusMessage("Thanks for reaching out. I’ll get back to you soon.");
       } else {
-        const errorData = await res.json();
-        setResponse(errorData.error || "There was an error sending the message. Please try again."); // Handle errors
+       setStatus("error");
+        setStatusMessage("Something went wrong, please try again later.");
       }
     } catch (error) {
-      setResponse("Error sending message.");  // Catch network or other errors
+      setStatus("error");
+      setStatusMessage("Error sending message, please try again.");
     }
-
-    setLoading(false);
-
-    // Clear form fields after submission
+    setIsSubmitting(false);
     setName("");
     setEmail("");
     setMessage("");
   };
-
   return (
     <section id="contact" className="py-20 bg-(--surface)">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Left Column - Contact Information */}
           <div className="flex flex-col justify-center space-y-8">
-            <h2 className="text-3xl font-bold text-[var(--text)]">Get in Touch</h2>
-            <p className="text-lg text-[var(--muted)]">
+            <h2 className="text-3xl font-bold text-(--text)">Get in Touch</h2>
+            <p className="text-lg text-(--muted)">
               Have a question or want to discuss a project? I’d love to hear from you. Please fill out the form below or get in touch directly via the information provided.
             </p>
 
             <div className="space-y-4">
               <div>
-                <strong className="text-lg text-[var(--text)]">Email:</strong>
-                <p className="text-[var(--muted)]">contact@poly-nex.com</p>
+                <strong className="text-lg text-(--text)">Email:</strong>
+                <p className="text-(--muted)">contact@poly-nex.com</p>
               </div>
               <div>
-                <strong className="text-lg text-[var(--text)]">Phone:</strong>
-                <p className="text-[var(--muted)]">+1 (234) 567-8901</p>
+                <strong className="text-lg text-(--text)">Phone:</strong>
+                <p className="text-(--muted)">+1 (234) 567-8901</p>
               </div>
               <div>
-                <strong className="text-lg text-[var(--text)]">Address:</strong>
-                <p className="text-[var(--muted)]">123 PolyNex St., Suite 100, City, Country</p>
+                <strong className="text-lg text-(--text)">Address:</strong>
+                <p className="text-(--muted)">123 PolyNex St., Suite 100, City, Country</p>
               </div>
               <div>
-                <strong className="text-lg text-[var(--text)]">Follow Us:</strong>
+                <strong className="text-lg text-(--text)">Follow Us:</strong>
                 <div className="flex space-x-4 mt-2 ">
-                  <Link href="#" target="_blank" rel="noopener noreferrer" className="text-(--royal-blue) hover:text-(--bright-blue)"><FaFacebookF className="text-[var(--royal-blue)] hover:text-[var(--sky-blue)] text-2xl" />
+                  <Link href="#" target="_blank" rel="noopener noreferrer" className="text-(--royal-blue) hover:text-(--bright-blue)"><FaFacebookF className="text-(--royal-blue) hover:text-(--sky-blue) text-2xl" />
                   </Link>
-                  <Link href="#" target="_blank" rel="noopener noreferrer" className="text-(--royal-blue) hover:text-[var(--bright-blue)]"><FaTwitter className="text-(--royal-blue) hover:text-(--sky-blue) text-2xl" />
+                  <Link href="#" target="_blank" rel="noopener noreferrer" className="text-(--royal-blue) hover:text-(--bright-blue)"><FaTwitter className="text-(--royal-blue) hover:text-(--sky-blue) text-2xl" />
                   </Link>
                   <Link href="#"  target="_blank" rel="noopener noreferrer" className="text-(--royal-blue) hover:text-(--bright-blue)"><FaInstagram className="text-(--royal-blue) hover:text-(--sky-blue) text-2xl" />
                   </Link>
@@ -91,9 +97,11 @@ export default function ContactPage() {
           <div className="bg-(--surface)] p-8 rounded-xl shadow-2xl border border-white/10 backdrop-blur-xl">
             <h3 className="text-2xl font-semibold text-(--text)] mb-6">Send a Message</h3>
 
+           
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-[var(--muted)]">Full Name</label>
+                <label htmlFor="name" className="block text-sm font-medium text-(--muted)">Full Name</label>
                 <input
                   type="text"
                   id="name"
@@ -106,7 +114,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[var(--muted)]">Your Email</label>
+                <label htmlFor="email" className="block text-sm font-medium text-(--muted)">Your Email</label>
                 <input
                   type="email"
                   id="email"
@@ -121,6 +129,7 @@ export default function ContactPage() {
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-(--muted)">Your Message</label>
                 <textarea
+                name="message"
                   id="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -130,19 +139,46 @@ export default function ContactPage() {
                 />
               </div>
 
-              {response && (
-                <div className="mt-2 text-sm text-center">
-            <span className="text-(--muted)">{response}</span>
-          </div>
-              )}
+             <AnimatePresence>
+        {status !== "idle" && (
+          <motion.div
+            className={`mt-6 flex items-start gap-3 rounded-2xl border px-4 py-4 text-sm shadow-lg transition-all duration-300
+              ${status === "sending"
+                ? "border-white/10 bg-(--surface) text-(--text)"
+                : status === "success"
+                ? "border-emerald-500/20 bg-emerald-500/10 text-emerald-300"
+                : "border-red-500/20 bg-red-500/10 text-red-300"
+              }`}
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 10 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="mt-0.5 shrink-0">
+              {status === "sending" && <Loader2 className="h-5 w-5 animate-spin text-(--brigth-blue)"/>}
+              {status === "success" && <CheckCircle2 className="h-5 w-5 text-emerald-400" />}
+              {status === "error" && <AlertCircle className="h-5 w-5 text-red-400" />}
+            </div>
+
+            <div>
+              <p className="font-semibold">
+                {status === "sending" && "Sending message..."}
+                {status === "success" && "Message sent successfully!"}
+                {status === "error" && "Failed to send message"}
+              </p>
+              <p className="mt-1 opacity-90">{statusMessage}</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
               <div className="mt-6 text-center">
                 <button
                   type="submit"
-                  disabled={loading}
-                  className="inline-block px-8 py-3 bg-gradient-to-r from-[var(--royal-blue)] via-(--bright-blue) to-(--sky-blue) text-(--bg) rounded-xl hover:scale-105 transition duration-300"
+                  disabled={isSubmitting}
+                  className="inline-block px-8 py-3 bg-linear-to-r from-(--royal-blue) via-(--bright-blue) to-(--sky-blue) text-(--bg) rounded-xl hover:scale-105 transition duration-300"
                 >
-                  {loading ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </div>
             </form>
