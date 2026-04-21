@@ -14,11 +14,14 @@ interface ProjectCardProps {
 export default function ProjectCard({ title, description, slug, thumbnailUrl, videoUrl }:ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
+
   return (
     <div
       className="relative group overflow-hidden rounded-xl shadow-xl transition-transform duration-300 hover:scale-105"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+
+      
     >
       <Link href={`/work/${slug}`}>
         <div className="relative">

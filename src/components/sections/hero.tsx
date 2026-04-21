@@ -82,13 +82,13 @@ export default function Hero() {
                 className="h-full w-full object-cover"
                 autoPlay
                 muted
-                loop
+                // loop
                 playsInline
                 preload="metadata"
                 poster="/images/hero-poster.jpg"
               >
                 <source
-                  src="https://res.cloudinary.com/drcthgf8u/video/upload/v1776493078/video_1_gbxtmi.mp4"
+                  src="https://res.cloudinary.com/drcthgf8u/video/upload/v1776763628/Twisted_Array_py6g1f.mkv"
                   type="video/mp4"
                 />
               </video>

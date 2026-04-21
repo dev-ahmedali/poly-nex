@@ -1,10 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import ProjectCard from "@/src/components/cards/project-card"; 
 import { projects } from "@/src/data/projects"; 
 import Pagination from "@/src/components/ui/pagination";
 import { motion } from "framer-motion";
+import ProjectCard from "@/src/components/cards/project-card";
 
 
 export default function WorksPage() {
@@ -34,7 +34,7 @@ export default function WorksPage() {
   return (
     <section id="works" className="px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl font-semibold text-(--text)">Motions</h2>
+        <h2 className="text-3xl font-semibold text-(--text)">Our 35 Motions</h2>
         <p className="mt-3 text-(--muted)">Explore All GeoMotion Presets.</p>
 
         <motion.div

@@ -71,20 +71,7 @@ export const projects = [
       "https://res.cloudinary.com/drcthgf8u/image/upload/v1776602238/Product_Frozen_Ice_Brack_zdydr1.png"
     ]
   },
-  {
-    slug: "particle-reveal",
-    title: "Particle Reveal",
-    description: "A procedural motion study created in Blender using Geometry Nodes.",
-    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
-    subTitle: "Blender 5.0.1",
-    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776602438/Particle_Reveal.blend_vxnwro.png",
-    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776602451/Particle_Reveal_pj59iz.mkv",
-    youtubeTrailer:"reH6GVn0HaU",
-    externalLink: "https://www.superhive.com/product/fluid-simulation",
-    galleryImages: [
-      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776602438/Particle_Reveal.blend_vxnwro.png"
-    ]
-  },
+  
   {
     slug: "anticipation-and-jump",
     title: "Anticipation and Jump",
@@ -293,6 +280,216 @@ export const projects = [
     externalLink: "https://www.superhive.com/product/fluid-simulation",
     galleryImages: [
       "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666301/Overshoot_Motion_do2wy2.jpg"
+    ]
+  },
+  {
+    slug: "Particle-Reveal-Burst",
+    title: "Particle Reveal Burst",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666314/Particle_Reveal_Burst.blend_ta2ggf.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776761795/Particle_Reveal_Burst_sicrzs.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666314/Particle_Reveal_Burst.blend_ta2ggf.jpg"
+    ]
+  },
+  {
+    slug: "peeling-off-01",
+    title: "Peeling Off 01",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666321/Peel_off_01_a0y9gc.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776761805/Peel_Off_0.1_qsqyo8.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666321/Peel_off_01_a0y9gc.jpg"
+    ]
+  },
+  {
+    slug: "peeling-off",
+    title: "Peeling Off",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666366/Peel_off_ilgp2z.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776761825/Peel_off_kty0ya.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666366/Peel_off_ilgp2z.jpg"
+    ]
+  },
+  {
+    slug: "pop_up_bounce_vibration",
+    title: "Pop Up Bounce Vibration",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666412/Pop_Up_Bounce_Vibration_uykfgf.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776761852/Pop_Up_Bounce_10001-0060_el6j7j.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666412/Pop_Up_Bounce_Vibration_uykfgf.jpg"
+    ]
+  },
+  {
+    slug: "product_frozen_and_fuzz",
+    title: "Product Frozen and Fuzz",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666431/Product_Frozen_and_Fuzz_tvi5ov.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776761862/Product_Frozen_and_Fuzz_a4dlnq.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666431/Product_Frozen_and_Fuzz_tvi5ov.jpg"
+    ]
+  },
+  {
+    slug: "product_spin_animation",
+    title: "Product Spin Animation",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666442/Product_Spin_Animation_qlvqgy.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776761999/Product_Spin_Animation_xl75qa.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666442/Product_Spin_Animation_qlvqgy.jpg"
+    ]
+  },
+  {
+    slug: "Radial_Pop-Up",
+    title: "Radial Pop Up",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666450/Radial_Pop-Up_hofagr.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776762043/Radial_Pop-Up_lwguhm.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666450/Radial_Pop-Up_hofagr.jpg"
+    ]
+  },
+  {
+    slug: "slide-in-popup",
+    title: "Slide In Popup",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666459/Slide-in_popup_lm4hyx.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776762051/Slide-in_popup_u2esbh.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666459/Slide-in_popup_lm4hyx.jpg"
+    ]
+  },
+  {
+    slug: "slide-up_product_reveal",
+    title: "Slide-Up Product Reveal",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666471/Slide-Up_Product_Reveal_xbf7vf.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776762061/Slide-Up_Product_Reveal_mcbhn7.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666471/Slide-Up_Product_Reveal_xbf7vf.jpg"
+    ]
+  },
+  {
+    slug: "spiral_motion",
+    title: "Spiral Motion",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666480/Spiral_Motion_waf6el.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776762068/Spiral_Motion_noh0un.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666480/Spiral_Motion_waf6el.jpg"
+    ]
+  },
+  {
+    slug: "staggered_popup",
+    title: "Staggered Popup",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666491/Staggered_Popup_gagkur.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776762074/Staggered_Popup_wzuocr.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666491/Staggered_Popup_gagkur.jpg"
+    ]
+  },
+  {
+    slug: "staggered-slide-in",
+    title: "Staggered Slide In",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666522/Staggered_Slide-in_b28pf0.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776762081/Staggered_Slide-in_wcfzjp.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666522/Staggered_Slide-in_b28pf0.jpg"
+    ]
+  },
+  {
+    slug: "top_down_motion",
+    title: "Top Down Motion",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666528/Top_Down_Motion_ozhqvc.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776762095/Top_Down_Motion_pku0ba.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666528/Top_Down_Motion_ozhqvc.jpg"
+    ]
+  },
+  {
+    slug: "twisted-array",
+    title: "Twisted Array",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666535/Twisted_Array.blend_vxvfo3.jpg",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776763628/Twisted_Array_py6g1f.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776666535/Twisted_Array.blend_vxvfo3.jpg"
+    ]
+  },
+  {
+    slug: "particle-reveal",
+    title: "Particle Reveal",
+    description: "A procedural motion study created in Blender using Geometry Nodes.",
+    longDescription: "Are you Trying to make a product popping animation in manually? Stop wasting your time. Introduce the Geo motion library. it's make it in one click!!!!!!! It's available on gumroad and super hive. the link is in comment and bio.",
+    subTitle: "Blender 5.0.1",
+    thumbnailUrl: "https://res.cloudinary.com/drcthgf8u/image/upload/v1776602438/Particle_Reveal.blend_vxnwro.png",
+    videoUrl: "https://res.cloudinary.com/drcthgf8u/video/upload/v1776602451/Particle_Reveal_pj59iz.mkv",
+    youtubeTrailer:"reH6GVn0HaU",
+    externalLink: "https://www.superhive.com/product/fluid-simulation",
+    galleryImages: [
+      "https://res.cloudinary.com/drcthgf8u/image/upload/v1776602438/Particle_Reveal.blend_vxnwro.png"
     ]
   },
 ];
