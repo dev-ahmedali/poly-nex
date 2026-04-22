@@ -74,9 +74,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.18 }}
           className="relative"
         >
-          <div className="absolute -inset-3 rounded-4xl bg-linear-to-br from-(--royal-blue)/20 via-(--bright-blue)/10 to-(--gold)/10 blur-2xl" />
+          <div className="absolute inset-0 rounded-4xl bg-linear-to-br from-(--royal-blue) via-(--bright-blue)/ to-(--gold)/50 blur-2xl animate-pulse" />
 
-          <div className="relative overflow-hidden rounded-4xl border border-white/10 bg-(--surface) p-3 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+          <div className="relative overflow-hidden rounded-4xl border-2 border-white/10 bg-(--surface) p-3 shadow-[0_30px_80px_rgba(0,0,0,0.45)] transition ease-in">
             <div className="aspect-4/5 overflow-hidden rounded-3xl bg-(--bg)">
               <video
                 className="h-full w-full object-cover"
@@ -85,10 +85,9 @@ export default function Hero() {
                 loop
                 playsInline
                 preload="metadata"
-                poster="/images/hero-poster.jpg"
               >
                 <source
-                  src="https://res.cloudinary.com/drcthgf8u/video/upload/v1776763628/Twisted_Array_py6g1f.mkv"
+                  src="https://res.cloudinary.com/drcthgf8u/video/upload/v1776600823/Pop_Up_Motion_10001-0060_trtde8.mkv"
                   type="video/mp4"
                 />
               </video>

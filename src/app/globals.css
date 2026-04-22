@@ -16,7 +16,7 @@
 
 /* Dark theme */
 [data-theme='dark'] {
-  --bg: #05070b; /* Dark background */
+  --bg: #0a111f; /* Dark background */
   --surface: #0b1220; /* Dark surface */
   --text: #f5f7fb; /* Light text */
   --muted: #94a3b8;
@@ -29,7 +29,40 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #2f8df5 #05070b;
+  scroll-behavior: smooth; /* Thumb color and track color */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2f8df5 #05070b;
+  scroll-behavior: smooth; /* Scrollbar thumb and track color */
+}
+
+/* Webkit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #05070b; /* Track color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2f8df5; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid #05070b; /* Optional border to make it look more defined */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1565d8; /* Thumb color on hover */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #0e3a8a; /* Thumb color when clicked */
 }
 
 body {
