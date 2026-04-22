@@ -1,6 +1,7 @@
 import Navbar from "../components/layout/navbar";
 import About from "../components/sections/about";
 import ContactPage from "../components/sections/contact";
+import FAQ from "../components/sections/faq";
 import Footer from "../components/sections/Footer";
 import Hero from "../components/sections/hero";
 
@@ -15,6 +16,7 @@ export default function HomePage() {
       <WorksPage />
       <ContactPage/>
       <About/>
+      <FAQ/>
       <Footer/>
    </main>
   );
