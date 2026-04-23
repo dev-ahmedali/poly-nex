@@ -65,7 +65,7 @@ export default function About() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-semibold text-[var(--text)]">Koushik</h3>
+            <h3 className="text-xl font-semibold text-[var(--text)]">Kowshik</h3>
             <p className="text-sm text-[var(--muted)]">3D Artist</p>
           </div>
 
