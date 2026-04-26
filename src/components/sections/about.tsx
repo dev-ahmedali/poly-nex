@@ -10,7 +10,7 @@ export default function About() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-semibold text-[var(--text)] sm:text-5xl lg:text-6xl"
+          className="text-4xl font-semibold text-(--text) sm:text-5xl lg:text-6xl"
         >
           About Us
         </motion.h2>
@@ -19,7 +19,7 @@ export default function About() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-6 max-w-2xl text-lg leading-7 text-[var(--muted)] sm:text-xl mx-auto"
+          className="mt-6 max-w-2xl text-lg leading-7 text-(--muted) sm:text-xl mx-auto"
         >
           We are a team of creative designers and animators working together to bring cinematic, abstract, and technical motion studies to life. Our goal is to provide procedural motion assets and visual work using the power of Blender and Geometry Nodes.
         </motion.p>
